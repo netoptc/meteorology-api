@@ -1,0 +1,21 @@
+{
+  "name": "meteorology-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "yarn build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Neto",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "module-alias": "^2.2.3"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^20.14.9",
+    "typescript": "^5.5.3"
+  }
+}
