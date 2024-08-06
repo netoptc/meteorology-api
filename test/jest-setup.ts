@@ -7,4 +7,4 @@ beforeAll(() => {
   server.init();
   global.testRequest = supertest(server.getApp());
 });
-TestAgent<supertest.Test>
+TestAgent<supertest.Test>;
