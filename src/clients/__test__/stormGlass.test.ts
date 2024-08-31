@@ -1,4 +1,4 @@
-import { StormGlass } from '@src/clients/StormGlass';
+import { StormGlass } from '@src/clients/stormGlass';
 import axios from 'axios';
 import stormglassNormalizedResponse3Hours from '@test/fixtures/stormglass_normalized_response_3_hours.json';
 import stormglassWeather3Hours from '@test/fixtures/stormglass_weather_3_hours.json';
