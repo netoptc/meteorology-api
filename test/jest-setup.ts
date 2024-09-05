@@ -1,10 +1,11 @@
 import { SetupServer } from '@src/server';
 import supertest from 'supertest';
-import TestAgent from 'supertest/lib/agent';
 
-beforeAll(() => {
-  const server = new SetupServer();
-  server.init();
+let server: SetupServer;
+beforeAll(async () => {
+  server = new SetupServer();
+  await server.init();
   global.testRequest = supertest(server.getApp());
 });
-TestAgent<supertest.Test>;
+
+afterAll(async () => await server.close());
