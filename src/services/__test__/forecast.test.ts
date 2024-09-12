@@ -1,6 +1,7 @@
 import { StormGlass } from '@src/clients/stormGlass';
 import stormGlassNormalizedResponseFixture from '@test/fixtures/stormglass_normalized_response_3_hours.json';
-import { Beach, BeachPosition, Forecast, ForecastProcessingInternalError } from '../forecast';
+import { Forecast, ForecastProcessingInternalError } from '../forecast';
+import { Beach, BeachPosition } from '@src/models/beache';
 
 jest.mock('@src/clients/stormGlass');
 
@@ -16,7 +17,6 @@ describe('Forecast Service', () => {
         lng: 151.289824,
         name: 'Manly',
         position: BeachPosition.E,
-        user: 'some-id',
       },
     ];
     const expectedResponse = [
@@ -98,7 +98,6 @@ describe('Forecast Service', () => {
         lng: 151.289824,
         name: 'Manly',
         position: BeachPosition.E,
-        user: 'some-id',
       },
     ];
     mockedStormGlassService.fetchPoints.mockRejectedValue(
